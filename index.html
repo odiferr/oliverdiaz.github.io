@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oliver Diaz | Full-Stack Developer & ML Engineer</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/terminal.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Matrix Background -->
+    <canvas id="matrix-bg"></canvas>
+
+    <!-- Terminal Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <span class="control close"></span>
+                    <span class="control minimize"></span>
+                    <span class="control maximize"></span>
+                </div>
+                <span class="terminal-title">oliver@portfolio:~$</span>
+            </div>
+            <div class="terminal-body">
+                <div id="terminal-output"></div>
+                <div class="terminal-cursor"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text">&lt;</span>
+                <span class="brand-name">OliverDiaz</span>
+                <span class="brand-text">/&gt;</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link" data-section="home">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-terminal">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-controls">
+                                <span class="control close"></span>
+                                <span class="control minimize"></span>
+                                <span class="control maximize"></span>
+                            </div>
+                            <span class="terminal-title">~/oliver-diaz</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">oliver@dev:~$</span>
+                                <span class="command">whoami</span>
+                            </div>
+                            <div class="terminal-line output">
+                                <span class="typing-text" data-text="Full-Stack Developer & ML Engineer"></span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">oliver@dev:~$</span>
+                                <span class="command">cat skills.txt</span>
+                            </div>
+                            <div class="terminal-line output">
+                                <span class="typing-text" data-text="Python | JavaScript | Machine Learning | AWS"></span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">oliver@dev:~$</span>
+                                <span class="command">echo $STATUS</span>
+                            </div>
+                            <div class="terminal-line output">
+                                <span class="typing-text" data-text="Available for hire | CS Student @ NJIT"></span>
+                            </div>
+                            <div class="terminal-line current">
+                                <span class="prompt">oliver@dev:~$</span>
+                                <span class="cursor">_</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="25000">0</div>
+                        <div class="stat-label">Lines of Code</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="15">0</div>
+                        <div class="stat-label">Projects Built</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="4">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-code"></i>
+                        View Projects
+                    </a>
+                    <a href="assets/Oliver_Diaz_Resume.pdf" class="btn btn-secondary" download>
+                        <i class="fas fa-download"></i>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="code-snippet">
+                    <div class="code-header">
+                        <span class="file-name">oliver_diaz.py</span>
+                        <span class="file-status">● modified</span>
+                    </div>
+                    <div class="code-body">
+                        <pre><code><span class="line-number">1</span><span class="keyword">class</span> <span class="class-name">Developer</span>:
+<span class="line-number">2</span>    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="variable">self</span>):
+<span class="line-number">3</span>        <span class="variable">self</span>.<span class="property">name</span> = <span class="string">"Oliver Diaz"</span>
+<span class="line-number">4</span>        <span class="variable">self</span>.<span class="property">role</span> = <span class="string">"Full-Stack Developer"</span>
+<span class="line-number">5</span>        <span class="variable">self</span>.<span class="property">languages</span> = [
+<span class="line-number">6</span>            <span class="string">"Python"</span>, <span class="string">"JavaScript"</span>,
+<span class="line-number">7</span>            <span class="string">"Java"</span>, <span class="string">"SQL"</span>
+<span class="line-number">8</span>        ]
+<span class="line-number">9</span>
+<span class="line-number">10</span>    <span class="keyword">def</span> <span class="function">get_skills</span>(<span class="variable">self</span>):
+<span class="line-number">11</span>        <span class="keyword">return</span> {
+<span class="line-number">12</span>            <span class="string">"frontend"</span>: [<span class="string">"React"</span>, <span class="string">"JavaScript"</span>],
+<span class="line-number">13</span>            <span class="string">"backend"</span>: [<span class="string">"Flask"</span>, <span class="string">"Python"</span>],
+<span class="line-number">14</span>            <span class="string">"ml"</span>: [<span class="string">"XGBoost"</span>, <span class="string">"scikit-learn"</span>],
+<span class="line-number">15</span>            <span class="string">"cloud"</span>: [<span class="string">"AWS"</span>, <span class="string">"Heroku"</span>]
+<span class="line-number">16</span>        }</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-bracket">[</span>
+                About Me
+                <span class="title-bracket">]</span>
+            </h2>
+
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="text-block">
+                        <h3>Background & Journey</h3>
+                        <p>From analyzing <span class="highlight">25,000+ COVID-19 cases</span> in the Air Force to building predictive ML models for UFC fights, my journey combines analytical rigor with creative problem-solving. Currently pursuing my CS degree at NJIT while crafting full-stack applications that solve real-world problems.</p>
+                    </div>
+
+                    <div class="text-block">
+                        <h3>What Drives Me</h3>
+                        <p>I'm passionate about the intersection of <span class="highlight">data science and web development</span>. Whether it's building automated data pipelines or creating interactive visualizations, I love transforming complex data into meaningful insights and user-friendly applications.</p>
+                    </div>
+
+                    <div class="quick-facts">
+                        <h4>Quick Facts</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Based in Elizabeth, NJ</li>
+                            <li><i class="fas fa-language"></i> Bilingual (English/Spanish)</li>
+                            <li><i class="fas fa-medal"></i> Air Force Veteran (2020-2024)</li>
+                            <li><i class="fas fa-graduation-cap"></i> CS Student @ NJIT (2025-2027)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="about-visual">
+                    <div class="tech-stack-visual">
+                        <div class="stack-category">
+                            <h4>Frontend</h4>
+                            <div class="tech-items">
+                                <span class="tech-item">JavaScript</span>
+                                <span class="tech-item">HTML/CSS</span>
+                                <span class="tech-item">Chart.js</span>
+                            </div>
+                        </div>
+
+                        <div class="stack-category">
+                            <h4>Backend</h4>
+                            <div class="tech-items">
+                                <span class="tech-item">Python</span>
+                                <span class="tech-item">Flask</span>
+                                <span class="tech-item">MySQL</span>
+                            </div>
+                        </div>
+
+                        <div class="stack-category">
+                            <h4>ML/Data</h4>
+                            <div class="tech-items">
+                                <span class="tech-item">XGBoost</span>
+                                <span class="tech-item">pandas</span>
+                                <span class="tech-item">scikit-learn</span>
+                            </div>
+                        </div>
+
+                        <div class="stack-category">
+                            <h4>Cloud/Tools</h4>
+                            <div class="tech-items">
+                                <span class="tech-item">AWS</span>
+                                <span class="tech-item">Git</span>
+                                <span class="tech-item">Heroku</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-bracket">{</span>
+                Technical Arsenal
+                <span class="title-bracket">}</span>
+            </h2>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Chart.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend & Database</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Flask</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>Machine Learning</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">XGBoost</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">scikit-learn</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">pandas</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="92"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Cloud & DevOps</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">AWS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="78"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Heroku</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-bracket">&lt;</span>
+                Featured Projects
+                <span class="title-bracket">/&gt;</span>
+            </h2>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title">
+                            <h3>UFC Fighter Analysis Platform</h3>
+                            <span class="project-type">Full-Stack Web App</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/odiferr" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-description">
+                        <p>Comprehensive UFC fighter comparison platform with automated data pipelines processing <strong>2,400+ fighters</strong> across 50+ statistical categories. Features interactive radar charts, real-time rankings, and fuzzy search capabilities.</p>
+                    </div>
+
+                    <div class="project-tech">
+                        <span class="tech-tag python">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">AWS RDS</span>
+                        <span class="tech-tag">Heroku</span>
+                        <span class="tech-tag">BeautifulSoup</span>
+                    </div>
+
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-number">2,400+</span>
+                            <span class="stat-label">Fighters</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Stats Categories</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">Weekly</span>
+                            <span class="stat-label">Auto Updates</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title">
+                            <h3>UFC Fight Outcome Predictor</h3>
+                            <span class="project-type">Machine Learning Model</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/odiferr" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-chart-line"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-description">
+                        <p>XGBoost-powered ML model predicting UFC fight outcomes using <strong>29 engineered features</strong> including differential statistics and conditional age factors. Generates win probabilities with betting odds calculations.</p>
+                    </div>
+
+                    <div class="project-tech">
+                        <span class="tech-tag python">Python</span>
+                        <span class="tech-tag">XGBoost</span>
+                        <span class="tech-tag">scikit-learn</span>
+                        <span class="tech-tag">pandas</span>
+                        <span class="tech-tag">matplotlib</span>
+                    </div>
+
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-number">29</span>
+                            <span class="stat-label">Features</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">85%</span>
+                            <span class="stat-label">Accuracy</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">Real-time</span>
+                            <span class="stat-label">Predictions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title">
+                            <h3>Data Pipeline Architecture</h3>
+                            <span class="project-type">Backend System</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/odiferr" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-database"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-description">
+                        <p>Automated data collection and processing system with web scraping, data validation, and cloud storage. Handles <strong>weekly updates</strong> for thousands of records with error handling and monitoring.</p>
+                    </div>
+
+                    <div class="project-tech">
+                        <span class="tech-tag python">Python</span>
+                        <span class="tech-tag">BeautifulSoup</span>
+                        <span class="tech-tag">AWS RDS</span>
+                        <span class="tech-tag">Cron Jobs</span>
+                        <span class="tech-tag">Error Handling</span>
+                    </div>
+
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Automated</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">99.9%</span>
+                            <span class="stat-label">Uptime</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Monitoring</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-bracket">$</span>
+                Professional Journey
+                <span class="title-bracket">$</span>
+            </h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Public Health Specialist</h3>
+                            <span class="company">United States Air Force</span>
+                            <span class="duration">2020 - 2024</span>
+                            <span class="location">Hill Air Force Base, UT</span>
+                        </div>
+                        <div class="timeline-body">
+                            <ul>
+                                <li>Analyzed and tracked <strong>25,000+ COVID-19 cases</strong> using advanced data collection methodologies</li>
+                                <li>Managed comprehensive vector surveillance database with <strong>4,000+ specimens annually</strong></li>
+                                <li>Coordinated public health operations for <strong>500,000-person air show</strong> events</li>
+                                <li>Created technical documentation including deviation analyses and trend assessments</li>
+                            </ul>
+                            <div class="tech-used">
+                                <span class="tech-badge">Data Analysis</span>
+                                <span class="tech-badge">Database Management</span>
+                                <span class="tech-badge">Risk Assessment</span>
+                                <span class="tech-badge">Technical Documentation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Quality Assurance Technician</h3>
+                            <span class="company">Flexline</span>
+                            <span class="duration">2018 - 2020</span>
+                            <span class="location">Kenilworth, NJ</span>
+                        </div>
+                        <div class="timeline-body">
+                            <ul>
+                                <li>Maintained <strong>95%+ quality standards</strong> across 150-200 daily product inspections</li>
+                                <li>Operated precision machining equipment for aerospace and pharmaceutical components</li>
+                                <li>Developed technical documentation and contributed to continuous improvement initiatives</li>
+                                <li>Implemented systematic testing protocols and deviation reporting procedures</li>
+                            </ul>
+                            <div class="tech-used">
+                                <span class="tech-badge">Quality Control</span>
+                                <span class="tech-badge">Process Optimization</span>
+                                <span class="tech-badge">Technical Writing</span>
+                                <span class="tech-badge">Compliance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Computer Science Student</h3>
+                            <span class="company">New Jersey Institute of Technology</span>
+                            <span class="duration">2025 - 2027</span>
+                            <span class="location">Newark, NJ</span>
+                        </div>
+                        <div class="timeline-body">
+                            <ul>
+                                <li>Bachelor of Science in Computer Science (Expected 2027)</li>
+                                <li>Focus on software engineering, data structures, and machine learning</li>
+                                <li>Building full-stack applications and ML models as personal projects</li>
+                                <li>Active in coding communities and open-source contributions</li>
+                            </ul>
+                            <div class="tech-used">
+                                <span class="tech-badge">Algorithms</span>
+                                <span class="tech-badge">Data Structures</span>
+                                <span class="tech-badge">Software Engineering</span>
+                                <span class="tech-badge">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-bracket">#!/bin/bash</span>
+                Let's Connect
+                <span class="title-bracket"># EOF</span>
+            </h2>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="terminal-contact">
+                        <div class="terminal-window">
+                            <div class="terminal-header">
+                                <div class="terminal-controls">
+                                    <span class="control close"></span>
+                                    <span class="control minimize"></span>
+                                    <span class="control maximize"></span>
+                                </div>
+                                <span class="terminal-title">contact.sh</span>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="terminal-line">
+                                    <span class="prompt">$</span>
+                                    <span class="command">./get_contact_info.sh</span>
+                                </div>
+                                <div class="terminal-line output">
+                                    <span class="property">NAME:</span> "Oliver Diaz"
+                                </div>
+                                <div class="terminal-line output">
+                                    <span class="property">EMAIL:</span> "oliverdiaz570@gmail.com"
+                                </div>
+                                <div class="terminal-line output">
+                                    <span class="property">PHONE:</span> "+1 (908) 848-9803"
+                                </div>
+                                <div class="terminal-line output">
+                                    <span class="property">LOCATION:</span> "Elizabeth, NJ"
+                                </div>
+                                <div class="terminal-line output">
+                                    <span class="property">STATUS:</span> "Available for opportunities"
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="prompt">$</span>
+                                    <span class="cursor">_</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-links">
+                    <h3>Get In Touch</h3>
+                    <p>Whether you want to discuss a project, talk about opportunities, or just say hello, I'd love to hear from you!</p>
+
+                    <div class="contact-buttons">
+                        <a href="mailto:oliverdiaz570@gmail.com" class="contact-btn email">
+                            <i class="fas fa-envelope"></i>
+                            <span>Send Email</span>
+                        </a>
+                        <a href="tel:+19088489803" class="contact-btn phone">
+                            <i class="fas fa-phone"></i>
+                            <span>Call Me</span>
+                        </a>
+                        <a href="https://github.com/odiferr" class="contact-btn github" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/oliver-diaz" class="contact-btn linkedin" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Oliver Diaz. Built with passion, caffeine, and clean code.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/odiferr" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:oliverdiaz570@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/matrix.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

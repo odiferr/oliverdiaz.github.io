@@ -355,7 +355,7 @@ document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
         document.title = '👋 Come back to Oliver\'s Portfolio!';
     } else {
-        document.title = 'Oliver Diaz | Full-Stack Developer & ML Engineer';
+        document.title = 'Oliver Diaz|Computer Science Student  |Full-Stack Developer';
     }
 });
 
